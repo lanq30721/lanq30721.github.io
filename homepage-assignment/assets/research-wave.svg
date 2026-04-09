@@ -1,0 +1,18 @@
+<svg width="720" height="420" viewBox="0 0 720 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="420" rx="28" fill="#FFF8F1"/>
+  <rect x="22" y="22" width="676" height="376" rx="22" stroke="#DCC8B2" stroke-width="2"/>
+  <path d="M60 303C119.333 236.333 178.667 203 238 203C297.333 203 356.667 263.333 416 263.333C475.333 263.333 534.667 120 594 120C633.556 120 662.889 149.333 682 208" stroke="#BB5A33" stroke-width="10" stroke-linecap="round"/>
+  <path d="M60 255C106.667 255 153.333 203 200 203C246.667 203 293.333 289 340 289C386.667 289 433.333 174 480 174C526.667 174 573.333 241 620 241C651.111 241 672.444 225 684 193" stroke="#E4B08C" stroke-width="10" stroke-linecap="round"/>
+  <path d="M60 120H199" stroke="#2A231E" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
+  <path d="M60 150H254" stroke="#2A231E" stroke-width="4" stroke-linecap="round" opacity="0.18"/>
+  <path d="M60 350H278" stroke="#2A231E" stroke-width="4" stroke-linecap="round" opacity="0.14"/>
+  <circle cx="238" cy="203" r="10" fill="#BB5A33"/>
+  <circle cx="416" cy="263" r="10" fill="#BB5A33"/>
+  <circle cx="594" cy="120" r="10" fill="#BB5A33"/>
+  <circle cx="200" cy="203" r="9" fill="#E4B08C"/>
+  <circle cx="340" cy="289" r="9" fill="#E4B08C"/>
+  <circle cx="480" cy="174" r="9" fill="#E4B08C"/>
+  <rect x="436" y="292" width="214" height="66" rx="18" fill="#2A231E"/>
+  <text x="455" y="321" fill="#FFF4E9" font-family="Aptos, Segoe UI, sans-serif" font-size="18">Text, Pattern, Context</text>
+  <text x="455" y="346" fill="#D8C4B4" font-family="Aptos, Segoe UI, sans-serif" font-size="16">from language to structure</text>
+</svg>

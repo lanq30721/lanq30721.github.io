@@ -1,0 +1,16 @@
+<svg width="640" height="720" viewBox="0 0 640 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="720" rx="36" fill="#F7EDE0"/>
+  <rect x="32" y="32" width="576" height="656" rx="28" fill="#FFF9F0" stroke="#D9C4AE" stroke-width="2"/>
+  <circle cx="320" cy="214" r="112" fill="#E1C39F"/>
+  <circle cx="320" cy="198" r="84" fill="#D17A4C"/>
+  <path d="M228 356C228 305.19 269.19 264 320 264C370.81 264 412 305.19 412 356V378H228V356Z" fill="#C96339"/>
+  <rect x="172" y="388" width="296" height="164" rx="82" fill="#2A231E"/>
+  <rect x="156" y="408" width="328" height="224" rx="34" fill="#FFF4E9" stroke="#D9C4AE" stroke-width="2"/>
+  <path d="M202 456H438" stroke="#D17A4C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M202 490H390" stroke="#D9C4AE" stroke-width="6" stroke-linecap="round"/>
+  <path d="M202 524H438" stroke="#D9C4AE" stroke-width="6" stroke-linecap="round"/>
+  <path d="M202 558H366" stroke="#D9C4AE" stroke-width="6" stroke-linecap="round"/>
+  <path d="M82 118C150 86 228 72 312 72C421 72 503 95 558 130" stroke="#C96339" stroke-width="10" stroke-linecap="round" opacity="0.35"/>
+  <path d="M84 620C148 652 219 668 322 668C430 668 510 645 560 604" stroke="#C96339" stroke-width="10" stroke-linecap="round" opacity="0.3"/>
+  <text x="320" y="618" text-anchor="middle" fill="#2A231E" font-family="Georgia, serif" font-size="54" font-weight="700">LQZ</text>
+</svg>
