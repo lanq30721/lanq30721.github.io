@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cesium | 个人主页</title>
+  <meta
+    name="description"
+    content="Cesium 的个人学术主页，包含简介、技术能力、项目、研究兴趣与公开链接。"
+  >
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="site-mark" href="#top">C</a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#skills">能力</a>
+        <a href="#projects">项目</a>
+        <a href="#research">兴趣</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换主题">
+        切换主题
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Personal Academic Homepage</p>
+          <h1>Cesium</h1>
+          <p class="hero-meta">上海交通大学外国语学院日语专业本科生</p>
+          <p class="hero-lead">
+            vibe coding 大好き！持续学习自然语言处理、数字人文与日语文本处理，也在尝试把语言学习
+            中感兴趣的问题结合计算方法进行研究。
+          </p>
+          <div class="hero-actions">
+            <a class="button-primary" href="#projects">查看项目</a>
+            <a class="button-secondary" href="#contact">联系与链接</a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <div class="photo-frame">
+            <img src="assets/profile-photo.jpg" alt="个人头像">
+          </div>
+          <p class="photo-note">公开主页仅保留学习与研究相关信息。</p>
+        </div>
+      </section>
+
+      <section class="content-section" id="about">
+        <div class="section-heading">
+          <p class="section-tag">About</p>
+          <h2>关于我</h2>
+        </div>
+        <div class="panel">
+          <p>
+            我目前就读于上海交通大学外国语学院日语专业，平时关注语言数据、文本处理与研究方法之间的联系。
+            在学习过程中，我对如何用基础的计算方法辅助文本整理、分析与观察逐渐产生兴趣。
+          </p>
+          <p>
+            这个主页主要用于公开展示目前的学习方向、部分项目经历与常用技术，不涉及过多私人信息，
+            也不作为完整简历页面使用。
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section" id="skills">
+        <div class="section-heading">
+          <p class="section-tag">Skills</p>
+          <h2>技术能力</h2>
+        </div>
+        <div class="card-grid">
+          <article class="info-card">
+            <h3>编程与数据处理</h3>
+            <p>Python、pandas、正则表达式、CSV / JSON 数据处理</p>
+          </article>
+          <article class="info-card">
+            <h3>文本分析</h3>
+            <p>中文与日语基础分词、词频统计、文本清洗、基础情感分析</p>
+          </article>
+          <article class="info-card">
+            <h3>开发与辅助工具</h3>
+            <p>Jupyter Notebook、Streamlit、GitHub、Markdown、Microsoft Office</p>
+          </article>
+          <article class="info-card">
+            <h3>AI 辅助使用</h3>
+            <p>使用 Codex 等工具辅助代码生成、调试、文本处理与基础数据分析</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="projects">
+        <div class="section-heading">
+          <p class="section-tag">Projects</p>
+          <h2>选取项目</h2>
+        </div>
+        <div class="project-list">
+          <article class="project-card">
+            <div class="project-head">
+              <h3>自用日语词典与例句查询工具</h3>
+              <span>2026.03</span>
+            </div>
+            <p>
+              为个人日语学习场景开发的小工具，主要用于整理词汇释义、例句与基础信息，帮助提升记忆与复习效率。
+            </p>
+            <ul>
+              <li>使用 Python、Streamlit 与 Jamdict 搭建查询界面。</li>
+              <li>尝试整合例句检索、词汇信息展示与基础数据组织流程。</li>
+              <li>在开发过程中接触了 SQLite 与 Hugging Face 部署相关实践。</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3>评论数据抓取、分词与情感分析课程项目</h3>
+              <span>2025.12 - 2026.01</span>
+            </div>
+            <p>
+              围绕公开评论文本完成数据获取、清洗、分词统计与基础分析，作为课程项目的一次完整实践。
+            </p>
+            <ul>
+              <li>使用 API 获取公开评论数据并进行基础清洗。</li>
+              <li>完成分词、词频统计与多维度文本整理。</li>
+              <li>结合弱监督思路进行基础情感与动机分析，并整理展示结果。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="research">
+        <div class="section-heading">
+          <p class="section-tag">Research Interests</p>
+          <h2>研究兴趣</h2>
+        </div>
+        <div class="card-grid research-grid">
+          <article class="info-card">
+            <h3>数字人文</h3>
+            <p>关注语言材料如何在具体的人文研究问题中被整理、比较与解释。</p>
+          </article>
+          <article class="info-card">
+            <h3>自然语言处理</h3>
+            <p>对文本处理、基础分析方法与语言数据应用场景保持持续兴趣。</p>
+          </article>
+          <article class="info-card">
+            <h3>日语文本处理</h3>
+            <p>希望结合日语学习背景，继续探索学习工具与文本分析之间的连接。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="contact">
+        <div class="section-heading">
+          <p class="section-tag">Contact</p>
+          <h2>联系与链接</h2>
+        </div>
+        <div class="contact-list">
+          <a class="contact-card" href="mailto:eternalfarewell@sjtu.edu.cn">
+            <span>邮箱</span>
+            <strong>eternalfarewell@sjtu.edu.cn</strong>
+          </a>
+          <a class="contact-card" href="https://github.com/lanq30721" target="_blank" rel="noreferrer">
+            <span>GitHub</span>
+            <strong>github.com/lanq30721</strong>
+          </a>
+          <a class="contact-card" href="https://huggingface.co/Cesium08042" target="_blank" rel="noreferrer">
+            <span>Hugging Face</span>
+            <strong>huggingface.co/Cesium08042</strong>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="currentYear"></span> Cesium</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
