@@ -2,7 +2,7 @@
 
 这是一个自用 Windows 光标文件，适合想把系统鼠标指针换成这个样式的人下载。
 
-- 下载页：https://lanq30721.github.io/cursor/
+- 下载页：https://lanq30721.github.io/cursor/index.html
 - 直接下载：https://raw.githubusercontent.com/lanq30721/lanq30721.github.io/main/cursor/6910.cur
 - 仓库文件：[6910.cur](./6910.cur)
 
