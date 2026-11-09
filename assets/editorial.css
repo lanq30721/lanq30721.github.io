@@ -125,6 +125,41 @@ p {
   font-style: italic;
 }
 
+.thought {
+  position: relative;
+  display: flex;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  align-items: flex-start;
+  justify-self: end;
+  gap: 0.5rem;
+  max-width: 20rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #e4d5b4;
+  border-radius: 0.65rem;
+  background: #fcf1d8;
+  box-shadow: 0 4px 14px #49391f12;
+  color: #56462e;
+  font-size: 0.9rem;
+}
+
+.thought span {
+  flex: none;
+}
+
+@media (min-width: 960px) {
+  .masthead {
+    grid-template-columns: minmax(0, 28rem) clamp(7rem, 26vw, 19rem) minmax(10rem, 1fr);
+  }
+
+  .thought {
+    grid-column: 3;
+    align-self: start;
+    justify-self: start;
+    margin-top: 0.8rem;
+  }
+}
+
 .page-grid {
   display: grid;
   grid-template-columns: 10rem minmax(0, 1fr);

@@ -33,6 +33,9 @@
       {% if ui.motto and ui.motto != empty -%}
       <p class="motto">{{ ui.motto | escape }}</p>
       {% endif -%}
+      {% if ui.thought and ui.thought != empty -%}
+      <p class="thought"><span aria-hidden="true">💭</span>{{ ui.thought | escape }}</p>
+      {% endif -%}
     </header>
 
     <div class="page-grid">

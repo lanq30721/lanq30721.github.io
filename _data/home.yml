@@ -21,6 +21,7 @@ locales:
     study: "日语主修"
     portrait_alt: "个人主页照片"
     motto: "宇宙很大，我们总能找到彼此"
+    thought: "最近在跟数学苦恋😭"
     skills: "数据与开发"
     advisor: "导师"
   en:
@@ -35,6 +36,7 @@ locales:
     study: "Major in Japanese"
     portrait_alt: "Homepage photo"
     motto: "In a universe this vast, we always find our way to each other—call it serendipity."
+    thought: "I’ve been struggling with math lately…"
     skills: "Data & Development"
     advisor: "Academic Advisor"
   ja:
@@ -49,6 +51,7 @@ locales:
     study: "日本語専攻"
     portrait_alt: "プロフィール写真"
     motto: "宇宙はこんなにも広いのに、私たちはいつだって巡り会える。"
+    thought: "最近、数学に苦戦しながらも勉強を続けています。"
     skills: "データ処理・開発"
     advisor: "指導教員"
 
