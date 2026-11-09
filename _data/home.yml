@@ -20,6 +20,7 @@ locales:
     affiliation: "上海交通大学外国语学院 · 本科二年级"
     study: "日语主修"
     portrait_alt: "个人主页照片"
+    motto: "宇宙很大，我们总能找到彼此"
     skills: "数据与开发"
     advisor: "导师"
   en:
@@ -33,6 +34,7 @@ locales:
     affiliation: "Second-year undergraduate, School of Foreign Languages, Shanghai Jiao Tong University"
     study: "Major in Japanese"
     portrait_alt: "Homepage photo"
+    motto: "In a universe this vast, we always find our way to each other—call it serendipity."
     skills: "Data & Development"
     advisor: "Academic Advisor"
   ja:
@@ -46,6 +48,7 @@ locales:
     affiliation: "上海交通大学 外国語学院 · 学部2年"
     study: "日本語専攻"
     portrait_alt: "プロフィール写真"
+    motto: "宇宙はこんなにも広いのに、私たちはいつだって巡り会える。"
     skills: "データ処理・開発"
     advisor: "指導教員"
 

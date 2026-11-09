@@ -57,7 +57,8 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 28rem) clamp(7rem, 26vw, 19rem);
   align-items: center;
-  gap: clamp(1rem, 4vw, 3rem);
+  column-gap: clamp(1rem, 4vw, 3rem);
+  row-gap: 0.65rem;
   margin-bottom: clamp(1.5rem, 4vw, 2.65rem);
 }
 
@@ -111,6 +112,17 @@ p {
   border: 1px solid var(--rule);
   border-radius: 1.2rem;
   background: #e5ebe2;
+}
+
+.motto {
+  grid-column: 2;
+  color: var(--muted);
+  font: 0.98rem/1.6 var(--serif);
+  text-wrap: pretty;
+}
+
+:lang(en) .motto {
+  font-style: italic;
 }
 
 .page-grid {
@@ -311,6 +323,10 @@ a:focus-visible {
 }
 
 @media (max-width: 700px) {
+  .motto {
+    grid-column: 1 / -1;
+  }
+
   .content-grid,
   .feature {
     grid-template-columns: 1fr;
@@ -329,7 +345,7 @@ a:focus-visible {
 
   .masthead {
     grid-template-columns: minmax(0, 1fr) 6.5rem;
-    gap: 0.85rem;
+    column-gap: 0.85rem;
   }
 
   .masthead h1 {

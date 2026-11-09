@@ -30,6 +30,9 @@
         <p class="study">{{ ui.study | escape }}</p>
       </div>
       <img class="portrait" src="{{ home.portrait | relative_url }}" alt="{{ ui.portrait_alt | escape }}" width="306" height="340">
+      {% if ui.motto and ui.motto != empty -%}
+      <p class="motto">{{ ui.motto | escape }}</p>
+      {% endif -%}
     </header>
 
     <div class="page-grid">
