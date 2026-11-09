@@ -1,0 +1,10 @@
+lang: zh-CN
+
+exclude:
+  - README.md
+  - README.txt
+  - cursor
+  - script.js
+  - style.css
+  - assets/profile-photo.jpg
+  - assets/research-wave.svg

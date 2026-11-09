@@ -1,0 +1,38 @@
+{% assign home = site.data.home -%}
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' | escape }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ home.name | escape }} | {{ home.label | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/resume.css' | relative_url }}">
+</head>
+<body>
+  <main class="resume">
+    <header class="resume-header">
+      <p class="page-label">{{ home.label | escape }}</p>
+      <h1>{{ home.name | escape }}</h1>
+    </header>
+
+    {% for section in home.sections -%}
+    <section class="resume-section" aria-labelledby="section-{{ forloop.index }}">
+      <h2 id="section-{{ forloop.index }}">{{ section.heading | escape }}</h2>
+
+      {% for entry in section.entries -%}
+      <article class="resume-entry">
+        <div class="entry-heading">
+          <h3>{{ entry.title | escape }}</h3>
+          {% if entry.period and entry.period != empty -%}
+          <p class="entry-period">{{ entry.period | escape }}</p>
+          {% endif -%}
+        </div>
+        {% if entry.role and entry.role != empty -%}
+        <p class="entry-role">{{ entry.role | escape }}</p>
+        {% endif -%}
+      </article>
+      {% endfor -%}
+    </section>
+    {% endfor -%}
+  </main>
+</body>
+</html>

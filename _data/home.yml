@@ -1,0 +1,20 @@
+# 修改这里的文字即可更新主页。sections 和 entries 按书写顺序展示。
+name: "Cesium"
+label: "个人主页"
+
+sections:
+  - heading: "研究方向"
+    entries:
+      - title: "基于深度学习的中日诗歌互文检测研究"
+
+  - heading: "实习经历"
+    entries:
+      - title: "国金证券研究所电力设备与新能源组"
+        role: "行业研究实习生 · 光伏 AIDC 方向"
+        period: "2026.07 — 2026.09"
+
+  - heading: "研究经历"
+    entries:
+      - title: "基于语料库的学术话语局部语法研究：跨子体裁对比视角"
+        role: "上海交通大学市级大学生创新实践计划 · 项目成员"
+        period: "2025.11 — 至今"
