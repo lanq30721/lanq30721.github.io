@@ -21,7 +21,7 @@ locales:
     study: "日语主修"
     portrait_alt: "个人主页照片"
     motto: "宇宙很大，我们总能找到彼此"
-    thought: "最近在跟数学苦恋😭"
+    thought: "在跟数学苦恋😭"
     skills: "数据与开发"
     advisor: "导师"
   en:
@@ -35,8 +35,8 @@ locales:
     affiliation: "Second-year undergraduate, School of Foreign Languages, Shanghai Jiao Tong University"
     study: "Major in Japanese"
     portrait_alt: "Homepage photo"
-    motto: "In a universe this vast, we always find our way to each other—call it serendipity."
-    thought: "I’ve been struggling with math lately…"
+    motto: "In a universe this vast, I always find my way to u--what people call serendipity."
+    thought: "struggling with math　despite interllectual …"
     skills: "Data & Development"
     advisor: "Academic Advisor"
   ja:
@@ -50,8 +50,8 @@ locales:
     affiliation: "上海交通大学 外国語学院 · 学部2年"
     study: "日本語専攻"
     portrait_alt: "プロフィール写真"
-    motto: "宇宙はこんなにも広いのに、私たちはいつだって巡り会える。"
-    thought: "最近、数学に苦戦しながらも勉強を続けています。"
+    motto: "宇宙の寂しさを一人で背負う"
+    thought: "最近、数学に苦戦しています。"
     skills: "データ処理・開発"
     advisor: "指導教員"
 
