@@ -1,16 +1,25 @@
 {% assign home = site.data.home -%}
 {% assign language = page.language | default: 'zh' -%}
 {% assign ui = home.locales[language] -%}
+{% assign area = page.area | default: 'home' -%}
+{% assign suffix = '' -%}
+{% assign heading = ui.label -%}
+{% if area != 'home' -%}
+  {% assign selected = home.sections | where: 'id', area | first -%}
+  {% assign heading = selected.translations[language] | default: selected.heading -%}
+  {% assign suffix = area | append: '/' -%}
+{% endif -%}
 <!doctype html>
 <html lang="{{ ui.html_lang | escape }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ home.name | escape }} | {{ ui.label | escape }}</title>
+  <title>{{ home.name | escape }} | {{ heading | escape }}</title>
   <link rel="stylesheet" href="{{ '/assets/editorial.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   {% for pair in home.locales -%}
   {% assign choice = pair[1] -%}
-  <link rel="alternate" hreflang="{{ choice.html_lang | escape }}" href="{{ choice.path | absolute_url }}">
+  {% assign language_url = choice.path | append: suffix -%}
+  <link rel="alternate" hreflang="{{ choice.html_lang | escape }}" href="{{ language_url | absolute_url }}">
   {% endfor -%}
 </head>
 <body>
@@ -18,10 +27,12 @@
     <nav class="language-switch" aria-label="{{ ui.language_label | escape }}">
       {% for pair in home.locales -%}
       {% assign choice = pair[1] -%}
-      <a href="{{ choice.path | relative_url }}" lang="{{ choice.html_lang | escape }}" hreflang="{{ choice.html_lang | escape }}"{% if pair[0] == language %} aria-current="page"{% endif %}>{{ choice.name | escape }}</a>
+      {% assign language_url = choice.path | append: suffix -%}
+      <a href="{{ language_url | relative_url }}" lang="{{ choice.html_lang | escape }}" hreflang="{{ choice.html_lang | escape }}"{% if pair[0] == language %} aria-current="page"{% endif %}>{{ choice.name | escape }}</a>
       {% endfor -%}
     </nav>
 
+    {% if area == 'home' -%}
     <header class="masthead" id="profile">
       <div class="identity">
         <p class="page-label">{{ ui.label | escape }}</p>
@@ -38,93 +49,80 @@
       {% endif -%}
     </header>
 
+    <nav aria-label="{{ ui.index | escape }}">
+      <h2 class="index-label">{{ ui.index | escape }}</h2>
+      <ul class="route-grid">
+        {% for section in home.sections -%}
+        {% assign section_heading = section.translations[language] | default: section.heading -%}
+        {% assign section_url = ui.path | append: section.id | append: '/' -%}
+        <li id="{{ section.id | escape }}">
+          <a class="route-card{% if forloop.first %} route-card-primary{% endif %}" href="{{ section_url | relative_url }}">
+            <span>{{ section_heading | escape }}</span>
+            {% if section.id == 'research-experience' -%}
+            <span class="route-meta" id="skills">{{ ui.skills | escape }}</span>
+            {% endif -%}
+            <span class="route-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        {% endfor -%}
+      </ul>
+    </nav>
+    {% else -%}
+    <header class="section-masthead">
+      <a class="home-link" href="{{ ui.path | relative_url }}">← {{ home.name | escape }}</a>
+      <h1>{{ heading | escape }}</h1>
+    </header>
+
     <div class="page-grid">
       <aside class="page-index">
         <nav aria-label="{{ ui.index | escape }}">
           <p class="index-label">{{ ui.index | escape }}</p>
           <ul>
-            <li><a href="#profile">{{ ui.profile | escape }}</a></li>
+            <li><a href="{{ ui.path | relative_url }}">{{ ui.profile | escape }}</a></li>
             {% for section in home.sections -%}
             {% assign section_heading = section.translations[language] | default: section.heading -%}
-            <li><a href="#{{ section.id | escape }}">{{ section_heading | escape }}</a></li>
+            {% assign section_url = ui.path | append: section.id | append: '/' -%}
+            <li><a href="{{ section_url | relative_url }}"{% if section.id == area %} aria-current="page"{% endif %}>{{ section_heading | escape }}</a></li>
             {% endfor -%}
+            {% if area == 'research-experience' -%}
             <li><a href="#skills">{{ ui.skills | escape }}</a></li>
-            <li><a href="#advisor">{{ ui.advisor | escape }}</a></li>
+            {% endif -%}
           </ul>
         </nav>
       </aside>
 
-      <div class="content-grid">
-        {% for section in home.sections -%}
-        {% assign section_heading = section.translations[language] | default: section.heading -%}
-        <section id="{{ section.id | escape }}" class="section{% if forloop.first %} feature{% endif %}" aria-labelledby="{{ section.id | escape }}-heading">
-          <div class="section-copy">
-            <h2 id="{{ section.id | escape }}-heading">{{ section_heading | escape }}</h2>
-            {% for entry in section.entries -%}
-            {% assign localized = entry.translations[language] -%}
-            {% assign title = localized.title | default: entry.title -%}
-            {% assign role = localized.role | default: entry.role -%}
-            {% assign period = localized.period | default: entry.period -%}
-            <article class="entry">
-              <h3>{{ title | escape }}</h3>
-              {% if role and role != empty -%}
-              <p class="entry-role">{{ role | escape }}</p>
-              {% endif -%}
-              {% if period and period != empty -%}
-              <p class="entry-period">{{ period | escape }}</p>
-              {% endif -%}
-            </article>
-            {% endfor -%}
-          </div>
-          {% if forloop.first -%}
-          <svg class="feature-art" viewBox="0 0 408 224" aria-hidden="true" focusable="false">
-            <defs>
-              <pattern id="reading-grid" width="18" height="18" patternUnits="userSpaceOnUse">
-                <circle cx="2" cy="2" r="1" fill="#b8d6c6" opacity=".2"/>
-              </pattern>
-            </defs>
-            <rect x="1" y="1" width="406" height="222" rx="18" fill="url(#reading-grid)" stroke="#a5c6b6" stroke-opacity=".23"/>
-            <g fill="none" stroke="#c8e0d2" stroke-linecap="round" stroke-width="2">
-              <path d="M39 48h74 M39 90h55 M39 133h74 M39 176h45" opacity=".72"/>
-              <path d="M294 48h74 M315 90h53 M294 133h74 M325 176h43" opacity=".72"/>
-            </g>
-            <g fill="none" stroke-linecap="round" stroke-width="2">
-              <path d="M113 48C184 48 206 132 294 133" stroke="#e8ba8b"/>
-              <path d="M94 90C167 90 244 48 294 48" stroke="#9dd0bb"/>
-              <path d="M113 133C192 133 219 90 315 90" stroke="#b4d4c3" opacity=".78"/>
-              <path d="M84 176C175 176 229 176 325 176" stroke="#8ab9a8" stroke-dasharray="3 8" opacity=".7"/>
-            </g>
-            <g fill="#e8ba8b">
-              <circle cx="113" cy="48" r="4"/>
-              <circle cx="294" cy="133" r="4"/>
-            </g>
-            <g fill="#b4d4c3">
-              <circle cx="94" cy="90" r="3.5"/>
-              <circle cx="294" cy="48" r="3.5"/>
-              <circle cx="113" cy="133" r="3.5"/>
-              <circle cx="315" cy="90" r="3.5"/>
-            </g>
-          </svg>
-          {% endif -%}
+      <div class="section-stack">
+        <section class="section" id="{{ area | escape }}" aria-label="{{ heading | escape }}">
+          {% for entry in selected.entries -%}
+          {% assign localized = entry.translations[language] -%}
+          {% assign title = localized.title | default: entry.title -%}
+          {% assign role = localized.role | default: entry.role -%}
+          {% assign period = localized.period | default: entry.period -%}
+          <article class="entry">
+            <h2>{{ title | escape }}</h2>
+            {% if role and role != empty -%}
+            <p class="entry-role">{{ role | escape }}</p>
+            {% endif -%}
+            {% if period and period != empty -%}
+            <p class="entry-period">{{ period | escape }}</p>
+            {% endif -%}
+          </article>
+          {% endfor -%}
         </section>
-        {% endfor -%}
 
-        <div class="details">
-          <section id="skills" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">{{ ui.skills | escape }}</h2>
-            <ul class="skill-list">
-              {% for skill in home.skills -%}
-              <li>{{ skill | escape }}</li>
-              {% endfor -%}
-            </ul>
-          </section>
-          <section id="advisor" aria-labelledby="advisor-heading">
-            <h2 id="advisor-heading">{{ ui.advisor | escape }}</h2>
-            <a class="advisor-link" href="{{ home.advisor.url | escape }}">{{ home.advisor.names[language] | escape }} <span aria-hidden="true">↗</span></a>
-          </section>
-        </div>
+        {% if area == 'research-experience' -%}
+        <section class="section skills-panel" id="skills" aria-labelledby="skills-heading">
+          <h2 id="skills-heading">{{ ui.skills | escape }}</h2>
+          <ul class="skill-list">
+            {% for skill in home.skills -%}
+            <li>{{ skill | escape }}</li>
+            {% endfor -%}
+          </ul>
+        </section>
+        {% endif -%}
       </div>
     </div>
+    {% endif -%}
   </main>
 </body>
 </html>

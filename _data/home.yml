@@ -1,12 +1,6 @@
 name: "兰巧智"
 portrait: "/assets/profile-photo.jpg"
 skills: ["Python", "SQLite", "Jupyter Notebook"]
-advisor:
-  url: "https://cissyduan.github.io/Homepage/"
-  names:
-    zh: "段思宇"
-    en: "Siyu Duan"
-    ja: "段思宇（Siyu Duan）"
 
 locales:
   zh:
@@ -23,7 +17,6 @@ locales:
     motto: "宇宙很大，我们总能找到彼此"
     thought: "在跟数学苦恋😭"
     skills: "数据与开发"
-    advisor: "导师"
   en:
     name: "English"
     html_lang: "en"
@@ -38,7 +31,6 @@ locales:
     motto: "In a universe this vast, I always find my way to u--what people call serendipity."
     thought: "struggling with math　despite interllectual disability…"
     skills: "Data & Development"
-    advisor: "Academic Advisor"
   ja:
     name: "日本語"
     html_lang: "ja"
@@ -53,21 +45,26 @@ locales:
     motto: "宇宙の寂しさを一人で背負う"
     thought: "最近、数学に苦戦しています。"
     skills: "データ処理・開発"
-    advisor: "指導教員"
 
 sections:
   - id: "research-focus"
     heading: "研究方向"
     translations:
-      en: "Research Focus"
-      ja: "研究テーマ"
+      en: "Research Interests"
+      ja: "研究分野"
     entries:
-      - title: "基于深度学习的中日诗歌互文检测研究"
+      - title: "数字人文"
         translations:
           en:
-            title: "Deep Learning for Intertextuality Detection in Chinese and Japanese Poetry"
+            title: "Digital Humanities"
           ja:
-            title: "深層学習による日中詩歌の間テクスト性検出"
+            title: "デジタル・ヒューマニティーズ"
+      - title: "自然语言处理（NLP）"
+        translations:
+          en:
+            title: "Natural Language Processing (NLP)"
+          ja:
+            title: "自然言語処理（NLP）"
 
   - id: "internship"
     heading: "实习经历"
@@ -106,3 +103,11 @@ sections:
             title: "コーパスに基づく学術談話のローカルグラマー研究：サブジャンル間の比較"
             role: "上海交通大学 市級大学生イノベーション実践プログラム · プロジェクトメンバー"
             period: "2025年11月〜現在"
+
+  - id: "publications"
+    heading: "发表情况"
+    translations:
+      en: "Publications"
+      ja: "研究業績"
+    entries:
+      - title: "Coming soon"
