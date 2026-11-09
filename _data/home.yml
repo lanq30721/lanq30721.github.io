@@ -18,8 +18,8 @@ locales:
     index: "页面索引"
     profile: "基本信息"
     affiliation: "上海交通大学外国语学院 · 本科二年级"
-    study: "日语主修 "
-    portrait_alt: "Cesium 的个人照片"
+    study: "日语主修"
+    portrait_alt: "个人主页照片"
     skills: "数据与开发"
     advisor: "导师"
   en:
@@ -31,8 +31,8 @@ locales:
     index: "On this page"
     profile: "Profile"
     affiliation: "Second-year undergraduate, School of Foreign Languages, Shanghai Jiao Tong University"
-    study: "Major in Japanese · Minor in Artificial Intelligence"
-    portrait_alt: "Portrait of Cesium"
+    study: "Major in Japanese"
+    portrait_alt: "Homepage photo"
     skills: "Data & Development"
     advisor: "Academic Advisor"
   ja:
@@ -44,8 +44,8 @@ locales:
     index: "目次"
     profile: "プロフィール"
     affiliation: "上海交通大学 外国語学院 · 学部2年"
-    study: "日本語専攻 · 人工知能副専攻"
-    portrait_alt: "Cesiumのプロフィール写真"
+    study: "日本語専攻"
+    portrait_alt: "プロフィール写真"
     skills: "データ処理・開発"
     advisor: "指導教員"
 

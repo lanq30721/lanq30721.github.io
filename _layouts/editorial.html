@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ home.name | escape }} | {{ ui.label | escape }}</title>
-  <link rel="stylesheet" href="{{ '/assets/editorial.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/editorial.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   {% for pair in home.locales -%}
   {% assign choice = pair[1] -%}
   <link rel="alternate" hreflang="{{ choice.html_lang | escape }}" href="{{ choice.path | absolute_url }}">
@@ -29,7 +29,7 @@
         <p class="affiliation">{{ ui.affiliation | escape }}</p>
         <p class="study">{{ ui.study | escape }}</p>
       </div>
-      <img class="portrait" src="{{ home.portrait | relative_url }}" alt="{{ ui.portrait_alt | escape }}" width="144" height="160">
+      <img class="portrait" src="{{ home.portrait | relative_url }}" alt="{{ ui.portrait_alt | escape }}" width="306" height="340">
     </header>
 
     <div class="page-grid">
