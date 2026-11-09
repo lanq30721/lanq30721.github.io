@@ -6,5 +6,4 @@ exclude:
   - cursor
   - script.js
   - style.css
-  - assets/profile-photo.jpg
   - assets/research-wave.svg

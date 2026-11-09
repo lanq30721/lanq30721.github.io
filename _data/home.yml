@@ -1,20 +1,102 @@
 name: "Cesium"
-label: "个人主页"
-affiliation: "Shanghai JiaoTong University 日本語専攻　2年生"
+portrait: "/assets/profile-photo.jpg"
+skills: ["Python", "SQLite", "Jupyter Notebook"]
+advisor:
+  url: "https://cissyduan.github.io/Homepage/"
+  names:
+    zh: "段思宇"
+    en: "Siyu Duan"
+    ja: "段思宇（Siyu Duan）"
+
+locales:
+  zh:
+    name: "中文"
+    html_lang: "zh-CN"
+    path: "/"
+    label: "个人主页"
+    language_label: "切换语言"
+    index: "页面索引"
+    profile: "基本信息"
+    affiliation: "上海交通大学外国语学院 · 本科二年级"
+    study: "日语主修 · 人工智能辅修"
+    portrait_alt: "Cesium 的个人照片"
+    skills: "数据与开发"
+    advisor: "导师"
+  en:
+    name: "English"
+    html_lang: "en"
+    path: "/en/"
+    label: "Personal Homepage"
+    language_label: "Language"
+    index: "On this page"
+    profile: "Profile"
+    affiliation: "Second-year undergraduate, School of Foreign Languages, Shanghai Jiao Tong University"
+    study: "Major in Japanese · Minor in Artificial Intelligence"
+    portrait_alt: "Portrait of Cesium"
+    skills: "Data & Development"
+    advisor: "Academic Advisor"
+  ja:
+    name: "日本語"
+    html_lang: "ja"
+    path: "/ja/"
+    label: "個人ホームページ"
+    language_label: "言語切り替え"
+    index: "目次"
+    profile: "プロフィール"
+    affiliation: "上海交通大学 外国語学院 · 学部2年"
+    study: "日本語専攻 · 人工知能副専攻"
+    portrait_alt: "Cesiumのプロフィール写真"
+    skills: "データ処理・開発"
+    advisor: "指導教員"
 
 sections:
-  - heading: "研究方向"
+  - id: "research-focus"
+    heading: "研究方向"
+    translations:
+      en: "Research Focus"
+      ja: "研究テーマ"
     entries:
       - title: "基于深度学习的中日诗歌互文检测研究"
+        translations:
+          en:
+            title: "Deep Learning for Intertextuality Detection in Chinese and Japanese Poetry"
+          ja:
+            title: "深層学習による日中詩歌の間テクスト性検出"
 
-  - heading: "实习经历"
+  - id: "internship"
+    heading: "实习经历"
+    translations:
+      en: "Internship"
+      ja: "インターンシップ"
     entries:
       - title: "国金证券研究所电力设备与新能源组"
         role: "行业研究实习生 · 光伏 AIDC 方向"
         period: "2026.07 — 2026.09"
+        translations:
+          en:
+            title: "Sinolink Securities Research Institute, Power Equipment and New Energy Team"
+            role: "Industry Research Intern · Photovoltaics and AI Data Centers"
+            period: "Jul–Sep 2026"
+          ja:
+            title: "国金証券研究所 電力設備・新エネルギーチーム"
+            role: "業界調査インターン · 太陽光発電・AIデータセンター分野"
+            period: "2026年7月〜9月"
 
-  - heading: "研究经历"
+  - id: "research-experience"
+    heading: "研究经历"
+    translations:
+      en: "Research Experience"
+      ja: "研究活動"
     entries:
       - title: "基于语料库的学术话语局部语法研究：跨子体裁对比视角"
         role: "上海交通大学市级大学生创新实践计划 · 项目成员"
         period: "2025.11 — 至今"
+        translations:
+          en:
+            title: "A Corpus-Based Study of Local Grammar in Academic Discourse: A Cross-Subgenre Comparison"
+            role: "Project Member · Municipal Undergraduate Innovation Practice Program at SJTU"
+            period: "Nov 2025–present"
+          ja:
+            title: "コーパスに基づく学術談話のローカルグラマー研究：サブジャンル間の比較"
+            role: "上海交通大学 市級大学生イノベーション実践プログラム · プロジェクトメンバー"
+            period: "2025年11月〜現在"
