@@ -1,0 +1,69 @@
+{% assign home = site.data.home -%}
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' | escape }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ home.name | escape }} | {{ home.label | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/editorial.css' | relative_url }}">
+</head>
+<body>
+  <main class="site-shell">
+    <header class="masthead">
+      <h1>{{ home.name | escape }}</h1>
+      <p class="page-label">{{ home.label | escape }}</p>
+    </header>
+
+    <div class="content-grid">
+      {% for section in home.sections -%}
+      <section class="section{% if forloop.first %} feature{% endif %}" aria-labelledby="section-{{ forloop.index }}">
+        <div class="section-copy">
+          <h2 id="section-{{ forloop.index }}">{{ section.heading | escape }}</h2>
+          {% for entry in section.entries -%}
+          <article class="entry">
+            <h3>{{ entry.title | escape }}</h3>
+            {% if entry.role and entry.role != empty -%}
+            <p class="entry-role">{{ entry.role | escape }}</p>
+            {% endif -%}
+            {% if entry.period and entry.period != empty -%}
+            <p class="entry-period">{{ entry.period | escape }}</p>
+            {% endif -%}
+          </article>
+          {% endfor -%}
+        </div>
+        {% if forloop.first -%}
+        <svg class="feature-art" viewBox="0 0 408 224" aria-hidden="true" focusable="false">
+          <defs>
+            <pattern id="reading-grid" width="18" height="18" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1" fill="#b8d6c6" opacity=".2"/>
+            </pattern>
+          </defs>
+          <rect x="1" y="1" width="406" height="222" rx="18" fill="url(#reading-grid)" stroke="#a5c6b6" stroke-opacity=".23"/>
+          <g fill="none" stroke="#c8e0d2" stroke-linecap="round" stroke-width="2">
+            <path d="M39 48h74 M39 90h55 M39 133h74 M39 176h45" opacity=".72"/>
+            <path d="M294 48h74 M315 90h53 M294 133h74 M325 176h43" opacity=".72"/>
+          </g>
+          <g fill="none" stroke-linecap="round" stroke-width="2">
+            <path d="M113 48C184 48 206 132 294 133" stroke="#e8ba8b"/>
+            <path d="M94 90C167 90 244 48 294 48" stroke="#9dd0bb"/>
+            <path d="M113 133C192 133 219 90 315 90" stroke="#b4d4c3" opacity=".78"/>
+            <path d="M84 176C175 176 229 176 325 176" stroke="#8ab9a8" stroke-dasharray="3 8" opacity=".7"/>
+          </g>
+          <g fill="#e8ba8b">
+            <circle cx="113" cy="48" r="4"/>
+            <circle cx="294" cy="133" r="4"/>
+          </g>
+          <g fill="#b4d4c3">
+            <circle cx="94" cy="90" r="3.5"/>
+            <circle cx="294" cy="48" r="3.5"/>
+            <circle cx="113" cy="133" r="3.5"/>
+            <circle cx="315" cy="90" r="3.5"/>
+          </g>
+        </svg>
+        {% endif -%}
+      </section>
+      {% endfor -%}
+    </div>
+  </main>
+</body>
+</html>
