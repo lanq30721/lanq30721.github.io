@@ -39,6 +39,7 @@
         <h1>{{ home.name | escape }}</h1>
         <p class="affiliation">{{ ui.affiliation | escape }}</p>
         <p class="study">{{ ui.study | escape }}</p>
+        <p class="study">{{ ui.interests | escape }}</p>
       </div>
       <img class="portrait" src="{{ home.portrait | relative_url }}" alt="{{ ui.portrait_alt | escape }}" width="306" height="340">
       {% if ui.motto and ui.motto != empty -%}
